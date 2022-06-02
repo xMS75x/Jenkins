@@ -2,10 +2,10 @@ resource "aws_instance" "<##INSTANCE_NAME##>" {
         key_name = "keypair_MSOUKOUNA"
         ami = "ami-021d41cbdefc0c994"
         security_groups = ["${aws_security_group.<##SECURITY_GROUP##>.id}"]
-        subnet_id = "${aws_subnet.<##SUBNET_ID##>.id}"
+        subnet_id = "${aws_subnet.subnet-0c59a465aaea21d4a.id}"
 	instance_type = "t2.micro"
 	user_data = "${file("../../SCRIPTS/<##USER_DATA##>")}"
-	associate_public_ip_address = <##PUBLIC_IP##>
+	associate_public_ip_address = 15.237.24.77
 
         tags = {
                 Name = "<##INSTANCE_NAME##>"
