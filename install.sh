@@ -3,4 +3,6 @@
 yum update -y
 yum install -y httpd
 systemctl enable --now httpd
-echo "<h1>Hello World !</h1>" > /var/www/html/index.html
+
+cd /var/www/
+git clone<##GIT_URL##>
